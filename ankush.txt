@@ -1,0 +1,9 @@
+HTML (Basics)
+JavaScript (Basics)
+Networking(Basics)
+sql(Basics)
+Ruby:
+   From Lynda tutorials
+   Practicing on CodeWars
+   Studied Progmatic Programmers book
+        
