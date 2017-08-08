@@ -1,8 +1,10 @@
 def process(string)
+return nil if string=""
 ans=""
-ans.concat(string.split(' ').max)
-ans.concat(" #{string.split(' ').min}")
+arr=string.split(' ').map!{|x| x.to_i}
+ans.concat("#{arr.max}")
+ans.concat(" #{arr.min}")
 ans
 end
 
-p process("1 2 3 4 5")
+p process("1 2 3 10 1000 0001")
