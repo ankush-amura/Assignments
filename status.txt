@@ -1,0 +1,56 @@
+--- topics completed ----
+
+- From step 1
+
+  1. Basic Linux commands
+  2. Compiler vs Interpreter (pros and cons)
+  3. OOPS
+  4. Git
+
+- From step 2
+
+  1. Ruby primer and Primer Ascent course from RubyMonk
+  2. irb
+  3. Ruby Doc (partial)
+in
+- From step 3
+
+  1. web fundamentals
+
+- From step 4
+
+  1. HTML
+  2. CSS
+  3. JavaScript (CodeAcademy)
+  4. using HTML+CSS+JS together
+
+- From step 5
+
+  1. SQL (Mysql)
+  2. NOSQL (MongoDB)
+  3. SQL vs NOSQL
+
+- From step 6
+
+  1. setup rails environment using rvm
+
+- From step 7
+
+  1. Rails app development (basic CRUD + filter + sort techniques )
+
+* completed developed 2 OOPS based apps in ruby
+* codewars challenges in ruby
+
+
+
+
+Ruby Topics:
+
+1.ruby objects ,syntactic sugar
+2.string operations
+3.conditions and loops
+4.hashes(basic)
+5.I/O and file handling
+6.Ruby's object model
+7.constants and variables
+8.blocks, lambda and procs
