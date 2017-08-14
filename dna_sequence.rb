@@ -11,4 +11,4 @@ def dna_sequence(sequence='')
 sequence.scan(/[A-Z]{3}/).take_while { |z|  $seq_dictionary[z]!='Stop' }.map{|x| $seq_dictionary[x]}.join
 end
 
-p Benchmark.measure{dna_sequence('UGCGAUGCUCGCUCCGAAUAAABC')}
+p dna_sequence('UGCGAUGCUCGCUCCGAAUAAABC')
