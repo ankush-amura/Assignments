@@ -1,0 +1,95 @@
+digit_strings=['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen',
+               'sixteen','seventeen','eighteen','nineteen'];
+tens_strings= ['twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety'];
+human_dict  = ['lakh','thousand','crore','','hundered']
+function validate_input(number)
+   { if(number.length > 9)
+      {
+        return "can't convert such large number as input "
+      }
+
+    }
+String.prototype.humanize = function()
+{
+  number=this
+  var output_humanised="";
+  var array_digits=number.split('');
+  array_digits  = array_digits.reverse();
+ for(var i=array_digits.length-1;i >= 0;i--)
+   {     if(i===4||i==6||i==8)
+     {     if(array_digits[i]==0)
+         {     if(array_digits[i-1]==0)
+           {
+             continue;
+           }
+          output_humanised=output_humanised +" "+digit_strings[array_digits[i-1]-1]+" "+human_dict[(i)%3]
+          continue;
+         }
+        num=parseInt(array_digits[i]+""+array_digits[i-1]);
+        if(num < 20)
+        { output_humanised=output_humanised+""+" "+digit_strings[num-1]+" "+human_dict[i%3];
+       }
+        else
+        {if(num%10==0)
+          { output_humanised=output_humanised+""+" "+tens_strings[Math.floor(num/10)-2]+" "+human_dict[i%3];
+          continue;}
+          else { output_humanised=output_humanised+""+" "+tens_strings[Math.floor(num/10)-2];
+          output_humanised=output_humanised+" "+digit_strings[num%10-1]+" "+human_dict[i%3];}
+        }
+          i--;}
+     else {
+       if(i==0)
+       { output_humanised=digit_strings[array_digits[i]-1];
+         console.log(output_humanised);
+         break;}
+       if(i==1)
+       { if(array_digits[i]!=0)
+         { num=parseInt(array_digits[i]+array_digits[i-1])
+         if(num<20) {output_humanised=output_humanised+" "+digit_strings[num-1];
+            console.log(output_humanised);}
+           else {output_humanised=output_humanised+" "+tens_strings[Math.floor(num/10)-2]+" "+digit_strings[(num%10)-1];
+            console.log(output_humanised);}
+           }
+         else {
+           output_humanised=output_humanised+" "+digit_strings[array_digits[i-1]-1];
+           console.log(output_humanised);
+         }
+
+         break;
+       }
+       if(i==3 && array_digits[i]!=0)
+       {
+        output_humanised=output_humanised+" "+digit_strings[array_digits[i]-1]+" "+"thousand"
+        continue;
+       }
+       if(i==2 && array_digits[i]!=0)
+       {
+        output_humanised=output_humanised+digit_strings[array_digits[i]-1]+" "+"hundered"
+       }
+       else{
+         if(array_digits[i]==0)
+         {
+           continue;
+         }
+         output_humanised=output_humanised+digit_strings[array_digits[i]-1]+" "+human_dict[i%4-1]
+
+        }
+
+     }
+   }
+}
+"1".humanize()
+"01".humanize()
+"11".humanize()
+"10".humanize()
+"101".humanize()
+"111".humanize()
+"1011".humanize()
+"1111".humanize()
+"10111".humanize()
+"10011".humanize()
+"110011".humanize()
+"100011".humanize()
+"1010011".humanize()
+"10000111".humanize()
+"100011".humanize()
