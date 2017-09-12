@@ -64,14 +64,14 @@ String.prototype.humanize = function()
        }
        if(i==2 && array_digits[i]!=0)
        {
-        output_humanised=output_humanised+digit_strings[array_digits[i]-1]+" "+"hundered"
+        output_humanised=output_humanised+" "+digit_strings[array_digits[i]-1]+" "+"hundered"
        }
        else{
          if(array_digits[i]==0)
          {
            continue;
          }
-         output_humanised=output_humanised+digit_strings[array_digits[i]-1]+" "+human_dict[i%4-1]
+         output_humanised=output_humanised+" "+digit_strings[array_digits[i]-1]+" "+human_dict[i%4-1]
 
         }
 
